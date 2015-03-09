@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Lineprof::VERSION
   spec.authors       = ["Takashi Kokubun"]
   spec.email         = ["takashikkbn@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Easy-to-use line profiler for Ruby.}
+  spec.description   = %q{Easy-to-use line profiler for Ruby.}
+  spec.homepage      = "https://github.com/k0kubun/lineprof"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

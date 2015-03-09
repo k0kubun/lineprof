@@ -1,31 +1,13 @@
 # Lineprof
 
-TODO: Write a gem description
+Easy-to-use line profiler for Ruby.
 
-## Installation
+## What's this?
 
-Add this line to your application's Gemfile:
+[tmm1/rblineprof](https://github.com/tmm1/rblineprof) is a powerful line profiler for Ruby.
+But rblineprof does not include a result formatter and its API is difficult to use.
+This lineprof gem has a colored formatter and simple API.
 
-```ruby
-gem 'lineprof'
-```
+## License
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install lineprof
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/lineprof/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+MIT License
