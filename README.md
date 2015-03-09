@@ -27,6 +27,8 @@ Lineprof.profile do
 end
 ```
 
+![](http://i.gyazo.com/2fe139b45cd73dc9a3295d4b37b0063b.png)
+
 ## License
 
 MIT License
