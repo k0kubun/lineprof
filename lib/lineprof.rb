@@ -1,5 +1,5 @@
 require 'rblineprof'
-require 'rack/lineprof'
+require 'rack/lineprof/source_extension'
 
 class Lineprof
   IGNORE_PATTERN = /lib\/lineprof\.rb$/
