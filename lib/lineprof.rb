@@ -2,12 +2,13 @@ require 'rblineprof'
 require 'rack/lineprof/source_extension'
 
 class Lineprof
-  IGNORE_PATTERN = /lib\/lineprof\.rb$/
+  IGNORE_PATTERN  = /lib\/lineprof\.rb$/
+  DEFAULT_PATTERN = /./
 
   class << self
-    def profile(&block)
-      value = nil
-      result = lineprof(/./) { value = block.call }
+    def profile(filename = caller_filename(caller), &block)
+      value  = nil
+      result = lineprof(filename) { value = block.call }
 
       puts Term::ANSIColor.blue("\n[Lineprof] #{'=' * 70}")
       puts "\n#{format(result)}\n"
@@ -15,6 +16,10 @@ class Lineprof
     end
 
     private
+
+    def caller_filename(caller_lines)
+      caller_lines.first.split(':').first || DEFAULT_PATTERN
+    end
 
     def format(result)
       sources = result.map do |filename, samples|
