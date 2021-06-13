@@ -18,7 +18,14 @@ class Lineprof
     private
 
     def caller_filename(caller_lines)
-      caller_lines.first.split(':').first || DEFAULT_PATTERN
+      filename = caller_lines.first.split(':').first
+
+      if filename
+        # Don't add \A because filename may not be an absolute path
+        /#{Regexp.escape(filename)}\z/
+      else
+        DEFAULT_PATTERN
+      end
     end
 
     def format(result)
